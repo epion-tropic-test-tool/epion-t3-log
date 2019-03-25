@@ -3,6 +3,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven'
+    id 'maven-publish'
     id "com.jfrog.bintray" version "1.8.4"
 }
 
@@ -33,7 +34,11 @@ repositories {
 
 dependencies {
 
+    // ettt core library
     implementation('com.zomu.t:epion-t3-core:0.0.1')
+
+    // for develop
+    compileOnly 'org.projectlombok:lombok:1.18.6'
 
     testCompile 'junit:junit:4.12'
 
@@ -53,6 +58,22 @@ tasks.withType(JavaCompile) {
     it.options.encoding = 'UTF-8'
 }
 
+// JavaDoc Jar packaging
+task packageJavadoc(type: Jar, dependsOn: javadoc) {
+    from javadoc.destinationDir
+    classifier = 'javadoc'
+}
+
+// Source Jar Packaging
+task packageSources(type: Jar, dependsOn: classes) {
+    from sourceSets.main.allSource
+    classifier = 'source'
+}
+
+artifacts {
+    archives packageJavadoc
+    archives packageSources
+}
 
 bintray {
     user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
@@ -87,7 +108,7 @@ install {
 
             licenses {
                 license {
-                    name 'Apache License'
+                    name 'Apache License 2.0'
                     url 'http://www.apache.org/licenses/'
                     distribution 'repo'
                 }
