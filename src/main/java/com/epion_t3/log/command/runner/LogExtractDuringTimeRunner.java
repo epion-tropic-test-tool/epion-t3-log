@@ -1,22 +1,20 @@
-package com.zomu.t.epion.tropic.test.tool.log.command.runner;
+package com.epion_t3.log.command.runner;
 
-import com.zomu.t.epion.tropic.test.tool.core.command.model.CommandResult;
-import com.zomu.t.epion.tropic.test.tool.core.command.runner.impl.AbstractCommandRunner;
-import com.zomu.t.epion.tropic.test.tool.core.exception.SystemException;
-import com.zomu.t.epion.tropic.test.tool.log.command.model.LogExtractDuringTime;
-import com.zomu.t.epion.tropic.test.tool.log.message.LogMessages;
+import com.epion_t3.log.command.model.LogExtractDuringTime;
+import com.epion_t3.log.message.LogMessages;
+import com.epion_t3.core.command.bean.CommandResult;
+import com.epion_t3.core.command.runner.impl.AbstractCommandRunner;
+import com.epion_t3.core.exception.SystemException;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
