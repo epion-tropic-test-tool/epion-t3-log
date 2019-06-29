@@ -50,3 +50,9 @@ nbdist/
 .nb-gradle/
 
 ### Gradle ###
+
+### OS ###
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
