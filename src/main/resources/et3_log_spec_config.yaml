@@ -27,12 +27,12 @@ commands:
     evidenceCommand: true
     summary:
       - lang: ja_JP
-        contents: "ログの抽出を実行時間から行います。指定したログファイルから指定したコマンドの実行時間（開始〜終了の間）のログを抽出します。エビデンスを残すための手段となります。"
+        contents: "任意のログファイルを走査しFlowの実行時間（開始〜終了までの時間）に出力されたログの抽出を行います。エビデンスを残すための手段となります。"
     testItem:
       - order: 1
         summary:
           - lang: ja_JP
-            contents: REST-APIを呼び出します。対象URL「${request.targetUrl}」、メソッド「${request.method}」、
+            contents: "任意のログファイルを走査しFlowの実行時間（開始〜終了までの時間）に出力されたログの抽出を行います。エビデンスを残すための手段となります。"
     function:
       - order: 1
         summary:
@@ -145,9 +145,9 @@ commands:
         type: string
         summary:
           - lang: ja_JP
-            contents: "ログファイル読み込みエンコーディング #(4)"
+            contents: "ログファイル読み込みエンコーディング #(5)"
           - lang: en_US
-            contents: "ログファイル読み込みエンコーディング #(4)"
+            contents: "ログファイル読み込みエンコーディング #(5)"
         description:
           - lang: ja_JP
             contents: "ログファイルを読み込むエンコーディングの指定を行います。デフォルトは「UTF-8」です。"
