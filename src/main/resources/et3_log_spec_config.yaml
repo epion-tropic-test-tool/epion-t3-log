@@ -90,8 +90,12 @@ commands:
         summary:
           - lang: ja_JP
             contents: "対象のログファイルをエビデンス取得したFlowIDを指定 # (1)"
+          - lang: en_US
+            contents: "対象のログファイルをエビデンス取得したFlowIDを指定 # (1)"
         description:
           - lang: ja_JP
+            contents: "読み込むログファイルを特定するために、エビデンス取得を行なったFlowIDを指定します。"
+          - lang: en_US
             contents: "読み込むログファイルを特定するために、エビデンス取得を行なったFlowIDを指定します。"
       - order: 6
         name: targetFlow
@@ -100,8 +104,12 @@ commands:
         summary:
           - lang: ja_JP
             contents: "ログの抽出対象とする操作を行なったFlowID # (2)"
+          - lang: en_US
+            contents: "ログの抽出対象とする操作を行なったFlowID # (2)"
         description:
           - lang: ja_JP
+            contents: "ログの抽出を行うべき時間を特定するために利用する。試験対象に対してログを取得したい操作を行なったFlowIDを指定する。"
+          - lang: en_US
             contents: "ログの抽出を行うべき時間を特定するために利用する。試験対象に対してログを取得したい操作を行なったFlowIDを指定する。"
       - order: 7
         name: extractPattern
@@ -110,8 +118,12 @@ commands:
         summary:
           - lang: ja_JP
             contents: "時間の抽出パターン # (3)"
+          - lang: en_US
+            contents: "時間の抽出パターン # (3)"
         description:
           - lang: ja_JP
+            contents: "ファイルを読み込み、１行ずつ時間の範囲内であるか判断を行います。その際に日付時間を抽出するための正規表現パターンを設定します。"
+          - lang: en_US
             contents: "ファイルを読み込み、１行ずつ時間の範囲内であるか判断を行います。その際に日付時間を抽出するための正規表現パターンを設定します。"
       - order: 8
         name: group
@@ -120,18 +132,26 @@ commands:
         summary:
           - lang: ja_JP
             contents: "時間の抽出パターンに対する対象グループ #(4)"
+          - lang: en_US
+            contents: "時間の抽出パターンに対する対象グループ #(4)"
         description:
           - lang: ja_JP
+            contents: "時間の抽出パターンでは正規表現のグループを使用します。その際に日付時間と認識するグループを指定します。デフォルトは「1」です。"
+          - lang: en_US
             contents: "時間の抽出パターンでは正規表現のグループを使用します。その際に日付時間と認識するグループを指定します。デフォルトは「1」です。"
       - order: 9
         name: encoding
         required: false
-        type: object
+        type: string
         summary:
           - lang: ja_JP
             contents: "ログファイル読み込みエンコーディング #(4)"
+          - lang: en_US
+            contents: "ログファイル読み込みエンコーディング #(4)"
         description:
           - lang: ja_JP
+            contents: "ログファイルを読み込むエンコーディングの指定を行います。デフォルトは「UTF-8」です。"
+          - lang: en_US
             contents: "ログファイルを読み込むエンコーディングの指定を行います。デフォルトは「UTF-8」です。"
 #####################################
 # メッセージ定義

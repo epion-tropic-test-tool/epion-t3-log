@@ -1,1 +1,4 @@
 rootProject.name = 'epion-t3-log'
+
+//include ':epion-t3-devtools-generator-dev'
+//project(':epion-t3-devtools-generator-dev').projectDir = new File('../epion-t3-devtools-generator')
